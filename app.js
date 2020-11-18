@@ -13,7 +13,91 @@ const render = require("./lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+function getManager() {
+    console.log('Build your Team!')
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'managerName',
+            message: 'What is your managers name?',
+            validate: (managerName) => {
+                if (managerName) {
+                    return true;
+                } else {
+                    console.log("Enter managers name!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'managerId',
+            message: 'What is youre managers id?',
+            validate: (managerId) => {
+                if (managerId) {
+                    return true;
+                } else {
+                    console.log("Enter manager Id!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'managerEmail',
+            message: 'what is your managers email?',
+            validate: (managerEmail) => {
+                if (managerEmail) {
+                    return true;
+                } else {
+                    console.log("Enter managers email!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'managerOffice',
+            message: 'what is your managers office number?',
+            validate: (managerOffice) => {
+                if (managerOffice) {
+                    return true;
+                } else {
+                    console.log("Enter managers office number!");
+                    return false;
+                }
+            }
+        },     
+    ]).then(answers => {
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice, answers.manager);
+        team.push(manager);
+        addTeam();
+    });
+};
 
+function addTeam() {
+    inquirer.prompt([
+     {
+        type: 'list',
+        name: 'memberType',
+        message: 'which type of team member would you like to add?',
+        choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members']         
+    }   
+    ]).then(choice => {
+        switch (choice.role) {
+            case 'Engineer':
+                addEngineer();
+                break;
+            case 'Intern':
+                addIntern();
+                break;
+            case 'I don\'t want to add any more team members':
+                buildTeam();
+                break;
+        }
+    })
+    
+}
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
