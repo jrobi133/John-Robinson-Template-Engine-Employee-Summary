@@ -9,6 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const team = [];
 
 
 // Write code to use inquirer to gather information about the development team members,
@@ -219,6 +220,12 @@ function addIntern() {
         addTeam();
     });
 };
+
+function buildTeam() {
+    fs.writeFileSync(outputPath, render(team), 'UTF-8');
+}
+
+getManager();
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
