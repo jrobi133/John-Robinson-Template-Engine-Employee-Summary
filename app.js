@@ -215,14 +215,14 @@ function addIntern() {
             }
         },     
     ]).then(answers => {
-        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internGithub, answers.intern);
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool, answers.intern);
         team.push(intern);
         addTeam();
     });
 };
 
 function buildTeam() {
-    fs.writeFileSync(outputPath, render(team), 'UTF-8');
+    fs.writeFileSync(outputPath, render(team));
 }
 
 getManager();
