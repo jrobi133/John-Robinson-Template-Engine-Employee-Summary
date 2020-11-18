@@ -98,6 +98,127 @@ function addTeam() {
     })
     
 }
+
+function addEngineer() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'engineerName',
+            message: 'What is the engineers name?',
+            validate: (engineerName) => {
+                if (engineerName) {
+                    return true;
+                } else {
+                    console.log("Enter engineers name!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'engineerId',
+            message: 'What is youre engineers id?',
+            validate: (engineerId) => {
+                if (engineerId) {
+                    return true;
+                } else {
+                    console.log("Enter engineers Id!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'engineerEmail',
+            message: 'what is the engineers email?',
+            validate: (engineerEmail) => {
+                if (engineerEmail) {
+                    return true;
+                } else {
+                    console.log("Enter engineers email!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'engineerGithub',
+            message: 'what is the engineer\'s Github?',
+            validate: (engineerGithub) => {
+                if (engineerGithub) {
+                    return true;
+                } else {
+                    console.log("Enter engineer\'s Github!");
+                    return false;
+                }
+            }
+        },     
+    ]).then(answers => {
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub, answers.engineer);
+        team.push(engineer);
+        addTeam();
+    });
+};
+function addIntern() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'internName',
+            message: 'What is the interns name?',
+            validate: (internName) => {
+                if (internName) {
+                    return true;
+                } else {
+                    console.log("Enter interns name!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'internId',
+            message: 'What is youre interns id?',
+            validate: (internId) => {
+                if (internId) {
+                    return true;
+                } else {
+                    console.log("Enter interns Id!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'internEmail',
+            message: 'what is the interns email?',
+            validate: (internEmail) => {
+                if (internEmail) {
+                    return true;
+                } else {
+                    console.log("Enter interns email!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'internSchool',
+            message: 'what is the intern\'s School?',
+            validate: (internSchool) => {
+                if (internSchool) {
+                    return true;
+                } else {
+                    console.log("Enter intern\'s School!");
+                    return false;
+                }
+            }
+        },     
+    ]).then(answers => {
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internGithub, answers.intern);
+        team.push(intern);
+        addTeam();
+    });
+};
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
