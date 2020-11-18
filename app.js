@@ -84,8 +84,8 @@ function addTeam() {
         message: 'which type of team member would you like to add?',
         choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members']         
     }   
-    ]).then(choice => {
-        switch (choice.role) {
+    ]).then(chosen => {
+        switch (chosen.memberType) {
             case 'Engineer':
                 addEngineer();
                 break;
