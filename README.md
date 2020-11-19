@@ -27,7 +27,7 @@ To install necessary dependencies, run the following command:
     
 ## Usage
     
-    The project prompts the user to build a team with the current options of Manager, Engineers, and Interns. After the user answers all the prompts a team.html file will be created based on the user inputs from the prompts showing the team.
+The project prompts the user to build a team with the current options of Manager, Engineers, and Interns. After the user answers all the prompts a team.html file will be created based on the user inputs from the prompts showing the team.
     
     
 ## License
