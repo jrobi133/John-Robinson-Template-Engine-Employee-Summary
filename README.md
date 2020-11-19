@@ -34,9 +34,9 @@ The project prompts the user to build a team with the current options of Manager
     
 This project is licensed under None license.
     
-## Contributing 
+## Contributers 
     
-    contributing is appreciated
+    John Robinson
     
     
 ## Tests
