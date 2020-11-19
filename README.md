@@ -1,9 +1,10 @@
 
 # Team Builder Generator
 
+
 ## Description:
     
-This app helps you create a engineering team with some simple prompts.
+This app helps you create a engineering team with some simple prompts. To watch a walkthrough video of this application click this link : https://drive.google.com/file/d/1puWUErlrlp8EsfbdPQ9C44pD4S4bFSln/view
     
     
 ## Table of Contents:
@@ -50,3 +51,6 @@ To run test, run the following command:
 If you have any question about the repo, open an issue or contact me directly at 
 johnarobinson133@gmail.com. You can find more of my work on my gitHub at :
 https://github.com/jrobi133
+
+
+![](/assets/screenshot.PNG)
