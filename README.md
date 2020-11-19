@@ -13,7 +13,7 @@ This app helps you create a engineering team with some simple prompts. To watch 
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
+* [Contributors](#contributors)
 * [Tests](#tests)
 * [Questions](#questions)
     
@@ -35,7 +35,7 @@ The project prompts the user to build a team with the current options of Manager
     
 This project is licensed under None license.
     
-## Contributers 
+## Contributors 
     
     John Robinson
     
